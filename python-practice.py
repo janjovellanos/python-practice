@@ -113,6 +113,68 @@ def concat_name(first_name, last_name):
 
 num = 5
 str = "5"
-print('num {0}, str {1}, equal? {2}'.format(num, str, num==str))
+# print('num {0}, str {1}, equal? {2}'.format(num, str, num==str))
 
-print(f'num {num}, str {str}, equal? {num==str}')
+# print(f'num {num}, str {str}, equal? {num==str}')
+
+def format_name(first, last):
+    return f"Hi, my name is {first} {last}"
+
+# print(format_name("Alex", "Ambrose"))  #> Hi, my name is Alex Ambrose
+# print(format_name("Amy", "Mayer"))     #> Hi, my name is Amy Mayer
+# print(format_name("Rick", "Morty"))    #> Hi, my name is Rick Morty
+
+def index_string(str):
+    return str[3:-1]
+
+# print(index_string("Alchemy"))     #> hem
+# print(index_string("Ridiculous"))  #> iculou
+# print(index_string("Serendipity")) #> endipit
+
+# string = 'hello'
+
+# string[0] = 'p'
+
+# print(string)
+
+def index_of(string, letter):
+    return string.lower().index(letter.lower())
+
+# print(index_of("Arm", "a"))  #> 0
+# print(index_of("Pie", "e"))  #> 2
+# print(index_of("Lucid", "i"))  #> 3
+# print(index_of("Obvious","u"))  #> 5
+
+def is_last_character_n(name):
+    return name[-1] == 'n'
+
+# print(is_last_character_n("Aiden"))  #> True
+# print(is_last_character_n("Piet"))   #> False
+# print(is_last_character_n("Bert"))   #> False
+# print(is_last_character_n("Dean"))   #> True
+
+def long_burp(num):
+    return 'Bu' + 'r'*num + 'p'
+
+# print(long_burp(3))  #> "Burrrp"
+# print(long_burp(5))  #> "Burrrrrp"
+# print(long_burp(9))  #> "Burrrrrrrrrp"
+
+def last_three(str, substr):
+    return str.lower().endswith(substr.lower())
+
+# print(last_three("Power", "wer"))  #> True
+# print(last_three("Application", "App"))   #> False
+# print(last_three("Raw", "raw"))   #> True
+# print(last_three("Bonjour", "OUR"))   #> True
+
+def is_palindrome(str):
+    reverse = ''.join(reversed(str))
+
+    return str == reverse
+
+
+# print(is_palindrome("kayak")) # True
+# print(is_palindrome("app"))  # False
+# print(is_palindrome("racecar")) # True
+# print(is_palindrome("valid")) # False
