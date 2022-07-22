@@ -277,17 +277,313 @@
 # # print(integer_division(8, 2))       #> 4
 
 
+from cmath import exp
+from tokenize import Name
+
+
 def find_digit_amount(n):
   l = len(str(n))
-  print(l)
   if n < 0:
     return l - 1
   return l
 
 
 
-print(find_digit_amount(123))           #> 3
-print(find_digit_amount(-56))           #> 2
-print(find_digit_amount(7154))          #> 4
-print(find_digit_amount(61217311514))   #> 11
-print(find_digit_amount(0))             #> 1
+# print(find_digit_amount(123))           #> 3
+# print(find_digit_amount(-56))           #> 2
+# print(find_digit_amount(7154))          #> 4
+# print(find_digit_amount(61217311514))   #> 11
+# print(find_digit_amount(0))             #> 1
+
+def perfect_square (num1, num2):
+    if num2**2 == num1:
+        return True
+    else:
+      return False
+
+
+# print(perfect_square(15, 5)) #> False
+# print(perfect_square(25, 5)) #> True
+# print(perfect_square(81, 9)) #> True
+# print(perfect_square(9, 2))  #> False
+
+def recursive_fib(num):
+    if num <= 1:
+        return num
+    else:
+        return(recursive_fib(num-1) + recursive_fib(num-2))
+
+# print(recursive_fib(1))     #> 1
+# print(recursive_fib(2))     #> 1
+# print(recursive_fib(4))     #> 3
+# print(recursive_fib(6))     #> 8
+# print(recursive_fib(12))    #> 144
+
+def recursive_countdown(num):
+    if num == 0:
+        return
+    else:
+        print(num)
+        return (recursive_countdown(num -1) )
+
+# recursive_countdown(5) #> 5 4 3 2 1
+
+def is_prime(num, i=2):
+    if(num < 2):
+        return True
+    if(num == 2):
+        return False
+    if(num < i * i):
+        return True
+
+    return is_prime(num, i + 1)
+
+
+
+#DAY 2
+def divisible_by_five(num):
+    return num % 5 == 0
+
+# print(divisible_by_five(5))    #> True
+# print(divisible_by_five(-55))  #> True
+# print(divisible_by_five(37))   #> False
+
+def calculate_exponent(base, exponent):
+    return base ** exponent
+
+# print(calculate_exponent(5, 5))     #> 3125
+# print(calculate_exponent(10, 10))   #> 10000000000
+# print(calculate_exponent(3, 3))     #> 27
+
+def remainder(num1, num2):
+    return num1 % num2
+
+# print(remainder(1, 3))  #> 1
+# print(remainder(3, 4))  #> 3
+# print(remainder(5, 5))  #> 0
+# print(remainder(7, 2))  #> 1
+
+def first_before_second(string, char1, char2):
+    if string.index(char1) < string.index(char2):
+        return True
+    else:
+        return False
+
+# print(first_before_second("a rabbit jumps joyfully", "a", "j"))
+# # > True
+# # Every instance of "a" occurs before every instance of "j".
+
+# print(first_before_second("knaves knew about waterfalls", "k", "w"))
+# #> True
+
+# print(first_before_second("happy birthday", "a", "y"))
+# #> False
+# # The "a" in "birthday" occurs after the "y" in "happy".
+
+# print(first_before_second("precarious kangaroos", "k", "a"))
+# > False
+
+x = 1
+y = '1'
+list1 = [1, 2]
+list2 = [1, 2]
+list3 = [2, 3]
+
+# print(x == x)
+# print(x == y)
+# print(list1 == list2)
+# print(list1 == list3)
+
+# x = 1
+# y = '1'
+# list1 = [1, 2]
+# list2 = [1, 2]
+# a = 10
+# b = 10
+# word1 = 'cat'
+# word2 = 'cat'
+# obj1 = { 0: 'cat'}
+# obj2 = { 0: 'cat'}
+
+# print(x == x)
+# print(x is x)
+
+# print(x == y)
+# print(x is y)
+
+# print(list1 == list2)
+# print(list1 is list2)
+
+# print(a == b)
+# print(a is b)
+
+# print(word1 == word2)
+# print(word1 is word2)
+
+# print(obj1 == obj2)
+# print(obj1 is obj2)
+
+# def largest_perimeter(numsArr):
+#         for i in range(len(numsArr)):
+
+
+# Example 1
+# try:
+#     str = 'hello'
+#     str[0] = 'm'
+#     print(str)
+# except(TypeError) as e:
+#     print('Error: ', e)
+# finally:
+#     print('I happen regardless of any exceptions.')
+
+# Example 2
+# try:
+#     print(word)
+# except(NameError) as e:
+#     print('Error: ', e)
+# finally:
+#     print('I happen regardless of any exceptions.')
+
+
+# Write your solution here.
+# def print_list(list):
+#     for i in list:
+#         print(i)
+
+
+# lst1 = [1, 2, 5, 1429]
+# lst2 = ['this', 'list', 'is', 'being', 'printed']
+# lst3 = ['there', 'are', 2, 'data', 'types', 'being', 'printed']
+# lst4 = [[1, 2], ['hello', 'from', 'within']]
+# print_list(lst1)        # 1 2 5 1429
+# print_list(lst2)        # this list is being printed
+# print_list(lst3)        # there are 2 data types being printed
+# print_list(lst4)        # [1, 2] ['hello', 'from', 'within']
+
+# guest_list = ["George", "Anthony", "Susan", "Tiffany"]
+
+# def check_membership(guest_name, guest_list):
+#     if guest_name in guest_list:
+#         return True
+#     else:
+#         return False
+
+
+# print(check_membership("Sally", guest_list))        # False
+# print(check_membership("Anthony", guest_list))      # True
+
+# print("** Doubling Penny **")
+
+# # How many times would a penny need to double to generate a million dollars?
+# count = 0
+# total = 0
+
+# # STEP 2: Write the while loop
+
+# while total < 1000000:
+#     if total == 0:
+#         total = 0.01
+#     else:
+#         total *= 2
+#     count +=1
+
+
+# print('Double', count, 'times')
+
+# # How much money has been generated at that point?
+# print('${:,}'.format(total))
+
+
+# def is_valid_hex_code(code):
+#     if code[0] == '#' and len(code) == 7:
+#         for i in code:
+#             print(i)
+#             if((not i.isalpha) or (not int(i).isnumeric)):
+#                 return False
+#             else:
+#                 return True
+
+
+# import re
+# def is_valid_hex_code(code):
+#     match = re.search(r’^#(?:[0-9a-fA-F]{3}){1,2}$’, code)
+#     if match:
+#         return True
+#     else:
+#         return False
+
+# print(is_valid_hex_code("#CD5C5C")) #> True
+# # print(is_valid_hex_code("#EAECEE")) #> True
+# # print(is_valid_hex_code("#eaecee")) #> True
+
+
+# def seq_of_numbers(input):
+#     for i in input:
+#         if i == i+1:
+#             pass
+#         else:
+
+# print(seq_of_numbers("1211"))
+# # This is "one 1, one 2, two 1s"
+# # Prints "111221"
+
+# print(seq_of_numbers("111221"))
+# # This is "three 1s, two 2s, and one 1"
+# # Prints "312211"
+
+# print(seq_of_numbers("31131211131221"))
+# # This is "one 3, two 1s, one 3, one 1, one 2, three 1s,
+# #    one 3, one 1, two 2s, and one 1"
+# # Prints "13211311123113112211"
+
+# def cap_space(word):
+#     res = ''
+#     for i in word:
+#         if i.isupper():
+#             res += ' ' + i.lower()
+#         else:
+#             res += i
+#     return res
+
+
+# print(cap_space("helloWorld"))     #> "hello world"
+# # print(cap_space("iLoveMyTeapot"))  #> "i love my teapot"
+# # print(cap_space("stayIndoors"))    #> "stay indoors"
+
+
+# def char_count(char, string):
+#     count = 0
+#     for el in string:
+#         if el == char:
+#             count += 1
+#     return count
+
+# print(char_count("a", "App Academy"))         #> 1
+# print(char_count("c", "Chamber of Secrets"))  #> 1
+# print(char_count("b", "big fat bubble"))      #> 4
+
+# def vowel_count(string):
+#     vowelsArr = 'aeiouAEIOU'
+#     count = 0
+#     for char in string:
+#         if char in vowelsArr:
+#             count += 1;
+#     return count
+
+# print(vowel_count("App Academy"))         #> 4
+# print(vowel_count("Coding Expert"))       #> 4
+# print(vowel_count("Supreme"))             #> 3
+# print(vowel_count("Chamber of Secrets"))  #> 5
+
+# def add_upper(string):
+#     res = ''
+#     for char in string:
+#         if(char.isupper()):
+#             res += char
+#     return res
+
+# print(add_upper("ApPlE"))        #> APE
+# print(add_upper("Coding"))       #> C
+# print(add_upper("PIano"))        #> PI
+# print(add_upper("SUPREME"))      #> SUPREME
