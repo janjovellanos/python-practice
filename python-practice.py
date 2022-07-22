@@ -587,3 +587,264 @@ list3 = [2, 3]
 # print(add_upper("Coding"))       #> C
 # print(add_upper("PIano"))        #> PI
 # print(add_upper("SUPREME"))      #> SUPREME
+
+
+
+
+# STEP 1 - Write a function named `welcome` that prints a welcome message
+
+# welcome = lambda : print('welcome')
+
+# # Step 2 - Write a function named `calc_sum` that
+# #   - takes in two numbers and
+# #   - returns their sum
+# calc_sum = lambda num1, num2: num1 + num2
+
+# # DO NOT EDIT - The guts of the program
+# welcome()
+
+# print(calc_sum(1,2), 'is 3?', calc_sum(1,2) == 3)
+# print(calc_sum(-10,-2), 'is -12?', calc_sum(-10,-2) == -12)
+# print(calc_sum(1.1,-2.2), 'is -1.1?', calc_sum(1.1,-2.2) == -1.1)
+# print(calc_sum('a','b'), 'is ab?', calc_sum('a','b') == 'ab')
+# print(calc_sum([1,2],[3,4]), 'is [1,2,3,4]?',
+#       calc_sum([1,2],[3,4]) == [1,2,3,4])
+
+# Write your code here.
+# def sample_function(arg1, arg2, input ='default'):
+#     return print(arg1, arg2, input)
+
+
+# # sample_function(input = "asdf", "a", "b")      # ERROR
+# # sample_function("asdf", input = "a", "b")      # ERROcleaR
+# sample_function("asdf", "a", input = "b")      # VALID
+
+# Write your code here.
+# def string_multi_print(str):
+#     return lambda int: print(str * int)
+
+# # string_multi_print = lambda str: print(str)
+
+
+# string_multi_print('hello ')(2)  # Prints "hello hello "
+# string_multi_print('wahoo ')(3)  # Prints "wahoo wahoo wahoo "
+
+#  OUR ATTEMPT
+# Write your code here.
+# def merge_sort(list):
+#     # Call merge somewhere in here
+#     if len(list) > 1:
+#         first_half = merge_sort(list[:len(lst)//2])
+#         second_half = merge_sort(list[len(lst)//2:])
+#         return merge(first_half, second_half)
+#     return list
+
+# def merge(lower, upper):
+#     i = j = 0
+#     temp = []
+#     while i < len(lower) or j < len(upper):
+#         if i == len(lower):
+#             temp.append(upper[j])
+#             j+=1
+#         elif j == len(upper):
+#             temp.append(lower[i])
+#             i+=1
+#         elif lower[i] < upper[j]:
+#             temp.append(lower[i])
+#             i+=1
+#         else:
+#             temp.append(upper[j])
+#             j+=1
+#     return temp
+
+
+# lst = [5, 2, 38, 91, 16, 427]
+
+# sorted_lst = merge_sort(lst)        # Out of place solution
+# print(sorted_lst)
+
+# merge_sort(lst)                     # In place solution
+# print(lst)
+
+# This is an out-of-place solution, see if you can do this in-place if you
+# hadn't previously done so!
+
+# def merge_sort(list):
+#     if len(list) > 1:
+#         mid = len(list)//2
+#         lower_half = merge_sort(list[:mid])
+#         upper_half = merge_sort(list[mid:])
+#         return merge(lower_half, upper_half)
+#     return list
+
+# def merge(lower, upper):
+#     i = j = 0
+#     temp = []
+#     while i < len(lower) or j < len(upper):
+#         if i == len(lower):
+#             temp.append(upper[j])
+#             j+=1
+#         elif j == len(upper):
+#             temp.append(lower[i])
+#             i+=1
+#         elif lower[i] < upper[j]:
+#             temp.append(lower[i])
+#             i+=1
+#         else:
+#             temp.append(upper[j])
+#             j+=1
+#     return temp
+
+
+# list = [5, 2, 38, 91, 16, 427]
+
+# sorted_list = merge_sort(list)        # Out of place solution
+# print(sorted_list)
+
+# merge_sort(list)                     # In place solution
+# print(list)
+
+# nums = set([1,2,3,4,5,4,3,2,1])
+
+# # nums2 = set('stringy')
+# # # print(sum(nums2))
+# # print(nums2)
+
+# letters = set({'1234'})
+# print(letters)              # {'a', 'r', 'b', 'c', 'd'}
+
+# nums = [1,6,4.3,7,-8,9,2]
+# # sorted(nums)
+# print(nums.sort())
+# print(nums)
+# print(sorted(nums)[4:])
+
+# # DO NOT EDIT - Starting with a simple lists of colors and numbers
+# colors = ["blue", "Green", "PURPLE", "blue-green", "sky blue"]
+# numbers = [2, 34, 8.5, -22.0, 33//4, 2**5]
+# print ('COLORS', colors)
+# print ('NUMBERS', numbers)
+
+# 1. Print the total number of colors (length of the list)
+# print(len(colors))
+
+# # 2. Print the first color
+# print(colors[0])
+
+# # 3. Print the second and third colors
+# print(colors[1:3])
+
+# # 4. Print the last two colors
+# print(colors[-2:])
+
+# 5. Print the smallest number in the numbers list
+# print(min(numbers))
+
+# # 6. Print the largest number in the numbers list
+# print(max(numbers))
+
+# # 7. Sort the numbers
+# print(sorted(numbers))
+
+# # UNCOMMENT WHEN YOU WORK ON #7
+# print ('SORTED NUMBERS', numbers)
+
+# 8. Sort the colors alphabetically ignoring case
+# print(sorted(colors, key=str.lower))
+# colors.sort(key=str.lower)
+# print(colors)
+# UNCOMMENT WHEN YOU WORK ON #8
+# print ('SORTED COLORS', colors)
+
+
+
+
+# def get_first_value(list):
+#     return list[0]
+# print(get_first_value([1, 2, 3]))        #> 1
+# print(get_first_value([80, 5, 100]))     #> 80
+# print(get_first_value([-500, 0, 50]))    #> -500
+
+
+# def get_sum_of_elements(list):
+#     return sum(list)
+
+# print(get_sum_of_elements([2, 7, 4]))     #> 13
+# print(get_sum_of_elements([45, 3, 0]))    #> 48
+# print(get_sum_of_elements([-2, 84, 23]))  #> 105
+
+
+# def first_last(list):
+#     # return [list[0]] + [list[len(list) -1]]
+#     return [list[0], list[-1]]
+
+# print(first_last([5, 10, 15, 20, 25]))          #> [5, 25]
+# print(first_last([13, None, False, True]))        #> [13, True]
+# print(first_last([None, 4, "6", "hello", None]))  #> [None, None]
+
+
+# def sum_first_last_list(list1, list2):
+#     return list1[0] + list2[-1]
+
+# print(sum_first_last_list([1, 2, 3], [5, 8, 9]))     #> 10
+# print(sum_first_last_list([53, 26], [5]))            #> 58
+# print(sum_first_last_list([9], [5, 8]))              #> 17
+# print(sum_first_last_list([64], [5, 6, 2]))          #> 66
+
+# # Write your function, here.
+# # def insertion_sort(lst):
+# #     for i in range(1, len(lst)):
+# #         ele = lst[i]
+# #         j = i-1
+# #         while lst[j] > ele and j >= 0:
+# #             lst[j+1] = lst[j]
+# #             j -= 1
+# #         lst[j+1] = ele
+# #     return lst
+
+# # print(insertion_sort([55, 21, 5, 3, 6, 95])) #> [3, 5, 6, 21, 55, 95]
+# # print(insertion_sort([4, 1, 0, 3, 8, 9])) #> [0, 1, 3, 4, 8, 9]
+# # print(insertion_sort([1, 4, 3, 0, 3, 0, 2, 8])) #> [0, 0, 1, 2, 3, 3, 4, 8]
+
+
+
+
+# def get_indices(list, item):
+#     res = []
+#     i = 0
+#     for el in list:
+#         if el == item:
+#             res.append(i)
+#         i += 1
+#     return res
+
+# #another solution
+# def get_indices(lst, val):
+#   indices = []
+#   for i in range(0, len(lst)):
+#     if val == lst[i]:
+#       indices.append(i)
+#   return indices
+
+
+# print(get_indices(["a", "a", "b", "a", "b", "a"], "a"))
+# # Prints [0, 1, 3, 5]
+
+# print(get_indices([1, 5, 5, 2, 7], 7))
+# # Prints [4]
+
+# print(get_indices([1, 5, 5, 2, 7], 5))
+# # Prints [1, 2]
+
+# print(get_indices([1, 5, 5, 2, 7], 8))
+# # Prints []
+
+# def sorted_arr(list, target):
+#     res = []
+#     sorted_list = sorted(list)
+#     for i in range(0, len(sorted_list)):
+#         if target == sorted_list[i]:
+#             res.append(i)
+#     return res
+
+# print(sorted_arr([1,2,5,2,3], 2))
